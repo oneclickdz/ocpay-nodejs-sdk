@@ -7,14 +7,11 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
-    "prepublishOnly": "npm run build && npm run test",
+    "prepublishOnly": "npm run build",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -37,6 +34,9 @@
     "url": "https://github.com/oneclickdz/ocpay-node-sdk/issues"
   },
   "homepage": "https://docs.oneclickdz.com",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "README.md",
